@@ -3,18 +3,22 @@ import HomePage from './pages/HomePage.js';
 import AboutPage from './pages/AboutPage.js';
 import ArticlesList from './pages/ArticlesList.js';
 import ArticlePage from './pages/ArticlePage.js';
+import NavBar from './Components/NavBar.js';
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/about' element={<AboutPage />} />
-          <Route path='/articles-list' element={<ArticlesList />} />
-          <Route path='/artilce' element={<ArticlePage />} />
-        </Routes>
+        <NavBar />
+        <div id="page-body">
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/articles-list' element={<ArticlesList />} />
+            <Route path='/artilce' element={<ArticlePage />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   );
